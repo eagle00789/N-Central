@@ -28,3 +28,20 @@ DDDDDDDDDDDDD            eeeeeeeeeeeeee            ttttttttttt  rrrrrrr         
     Author     : Chris Simon
     Version    : 1.0.0.0 Initial Build
 #>
+
+This service will read Atlassian based status pages.
+An example of such pages is https://status.carbonite.com/
+
+If you browse to any Atlassian Statuspage based page, you will see a Powered by Atlassian Statuspage text that you can use to recognise any page that uses the Atlassian Statuspage technology.
+
+Known examples are:
+
+1Password: https://1password.statuspage.io/
+Confluence: https://confluence.status.atlassian.com/
+Atlassian Status Page: https://metastatuspage.com/
+Carbonite: https://status.carbonite.com/
+TeamViewer: https://status.teamviewer.com/
+Wasabi: https://status.wasabi.com/
+
+The service will return a 1 in the output Maintenance Scheduled if a scheduled maintenance is active
+It will return a 1 in Incident Active if an incident is currently active.
