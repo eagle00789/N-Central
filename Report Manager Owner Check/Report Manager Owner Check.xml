@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<service xmlns="http://www.n-able.com" author="chris.simon@detron.nl" creationdate="08/07/2024" organization="N-able Technologies" syntaxversion="1.1.0.0" version="1.0.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+	<servicedefinition id="777071" reason="" releasedependency="4.5.0.0" servicetype="AMP" version="1.0.1.1">
+		<description country="ca" language="en">Check if all reports are owned by Reports Admin</description>
+		<displayname country="ca" language="en">Report Manager Owner Check</displayname>
+		<displaylabel>Report Manager Owner Check</displaylabel>
+		<help country="ca" language="en">Report Manager Owner Check</help>
+		<popuphelp country="ca" language="en">Report Manager Owner Check</popuphelp>
+
+
+		<serviceparameters aggregatedata="false" aggregatetasks="false" maxinstances="1" maxpollrate="60" minpollrate="0" schedulertype="Quartz Based Scheduler" serviceinstancetype="Multiple" timetostale="60" usesstockserviceitem="false"/>
+
+
+		<moduleparameters>
+
+
+		
+			<moduleparameter key="Password" max="" min="" phardcoded="false" preferredident="0" foruseby="6" type="6" value="">
+				<shortdescription country="ca" language="en">Password</shortdescription>
+				<longdescription country="ca" language="en">Password</longdescription>
+				<help country="ca" language="en"/>
+				<presentationinfo>
+					<presentationitem datatype="String" description="" type="mandatory" value="" />
+				</presentationinfo>
+			</moduleparameter>
+			<moduleparameter key="Server" max="" min="" phardcoded="false" preferredident="0" foruseby="6" type="2" value="&lt;Server FQDN&gt;">
+				<shortdescription country="ca" language="en">Server FQDN</shortdescription>
+				<longdescription country="ca" language="en">Server FQDN</longdescription>
+				<help country="ca" language="en"/>
+				<presentationinfo>
+					<presentationitem datatype="String" description="" type="mandatory" value="" />
+				</presentationinfo>
+			</moduleparameter>
+			<moduleparameter key="Username" max="" min="" phardcoded="false" preferredident="0" foruseby="6" type="2" value="report">
+				<shortdescription country="ca" language="en">Username</shortdescription>
+				<longdescription country="ca" language="en">Username</longdescription>
+				<help country="ca" language="en"/>
+				<presentationinfo>
+					<presentationitem datatype="String" description="" type="mandatory" value="" />
+				</presentationinfo>
+			</moduleparameter>
+			<moduleparameter key="scan_interval" max="" min="" phardcoded="false" preferredident="0" foruseby="3" type="2" value="0 0/10 * * * ? *">
+				<shortdescription country="ca" language="en">Scan Interval</shortdescription>
+				<longdescription country="ca" language="en">Scan Interval</longdescription>
+				<help country="ca" language="en">The number of minutes between scans.</help>
+			</moduleparameter>
+			<moduleparameter key="selectedAutomationPolicy" max="" min="" phardcoded="true" preferredident="0" foruseby="3" type="2" value="282999506">
+				<shortdescription country="ca" language="en">Automation Manager Policy</shortdescription>
+				<longdescription country="ca" language="en">Automation Manager Policy</longdescription>
+				<help country="ca" language="en"/>
+			</moduleparameter>
+			<moduleparameter key="serviceIdentifier" max="" min="" phardcoded="false" preferredident="1" foruseby="3" type="2" value="">
+				<shortdescription country="ca" language="en">Service Identifier</shortdescription>
+				<longdescription country="ca" language="en">Service Identifier</longdescription>
+				<help country="ca" language="en"/>
+			</moduleparameter>
+		</moduleparameters>
+
+
+
+		<scandetails>
+			<scandetailid>3773300</scandetailid>
+		</scandetails>
+	</servicedefinition>
+
+
+
+	<scandetail id="3773300" monitoringtypeon="true" processforstate="true" cookid="23" releasedependency="2024.3.0.16" version="1.0.0.0" >
+		<thresholddefaults>
+			<thresholds configurable="true" type="Double"><threshold high="0" low="0" streval="" strvalue="" state="Normal"/><threshold high="-1" low="-9223372036854775808" streval="" strvalue="" state="Warning"/><threshold high="9223372036854775807" low="1" streval="" strvalue="" state="Failed"/>
+			</thresholds>
+		</thresholddefaults>
+		<description country="ca" language="en">Results</description>
+		<displayname country="ca" language="en">SD777071_Results</displayname>
+	</scandetail>
+
+
+	<automationmanagerpolicy name="Report Manager Owner Check" description="Check if all reports are owned by Reports Admin" itemuuid="d97591b5-cd68-411b-ac8a-92e2f1a9ce3e" category="0" uploaddate="2024-08-07 13:21:57">
+		<ampdata>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48UG9saWN5IERlc2NyaXB0aW9uPSJRMmhsWTJzZ2FXWWdZV3hzSUhKbGNHOXlkSE1nWVhKbElHOTNibVZrSUdKNUlGSmxjRzl5ZEhNZ1FXUnRhVzQ9IiBFeGVjdXRpb25UeXBlPSJMb2NhbCIgSUQ9ImQ5NzU5MWI1LWNkNjgtNDExYi1hYzhhLTkyZTJmMWE5Y2UzZSIgTWluUmVxdWlyZWRWZXJzaW9uPSIyLjE3LjAuMSIgTWluaW11bVBTVmVyc2lvblJlcXVpcmVkPSIwLjAuMCIgTmFtZT0iUmVwb3J0IE1hbmFnZXIgT3duZXIgQ2hlY2siIFJlbW90ZUNhdGVnb3J5PSIwIiBWZXJzaW9uPSIyLjE3LjAuMSI+CiAgPE9iamVjdCBEYXRhPSImbHQ7eG1sJmd0OyZsdDtQYXJhbWV0ZXJzJmd0OyZsdDtQYXJhbWV0ZXIgUGFyYW1ldGVyTmFtZT0mcXVvdDtTZXJ2ZXImcXVvdDsgTGFiZWw9JnF1b3Q7U2VydmVyIEZRRE4mcXVvdDsgUGFyYW1ldGVyVHlwZT0mcXVvdDtzdHJpbmcmcXVvdDsgVmFsdWU9JnF1b3Q7JmFtcDtsdDtTZXJ2ZXIgRlFETiZhbXA7Z3Q7JnF1b3Q7IC8mZ3Q7Jmx0O1BhcmFtZXRlciBQYXJhbWV0ZXJOYW1lPSZxdW90O1VzZXJuYW1lJnF1b3Q7IExhYmVsPSZxdW90O1VzZXJuYW1lJnF1b3Q7IFBhcmFtZXRlclR5cGU9JnF1b3Q7c3RyaW5nJnF1b3Q7IFZhbHVlPSZxdW90O3JlcG9ydCZxdW90OyAvJmd0OyZsdDtQYXJhbWV0ZXIgUGFyYW1ldGVyTmFtZT0mcXVvdDtQYXNzd29yZCZxdW90OyBMYWJlbD0mcXVvdDtQYXNzd29yZCZxdW90OyBQYXJhbWV0ZXJUeXBlPSZxdW90O3Bhc3N3b3JkJnF1b3Q7IFZhbHVlPSZxdW90OyZxdW90OyAvJmd0OyZsdDsvUGFyYW1ldGVycyZndDsmbHQ7T3V0cHV0UGFyYW1ldGVycyZndDsmbHQ7UGFyYW1ldGVyIFBhcmFtZXRlck5hbWU9JnF1b3Q7UmVzdWx0cyZxdW90OyBMYWJlbD0mcXVvdDtSZXN1bHRzJnF1b3Q7IFBhcmFtZXRlclR5cGU9JnF1b3Q7bnVtYmVyJnF1b3Q7IFZhbHVlPSZxdW90O0V4ZWN1dGUgYSBTUUwgUXVlcnkuUmVzdWx0JnF1b3Q7IC8mZ3Q7Jmx0Oy9PdXRwdXRQYXJhbWV0ZXJzJmd0OyZsdDsveG1sJmd0OyIgSUQ9IntjMGFmMmI1OS1lZmE0LTRhZmEtYmM3Yy02Y2NlNGFmYWNmYmR9IiBUeXBlPSJ7QjZGQTZEOEItRUVBQS00N0E2LTg0NjMtN0Y5QTRGNUJCQjZFfSIvPgogIDxMaW5rTWFuYWdlciB4bWxucz0iaHR0cDovL3NjaGVtYXMuZGF0YWNvbnRyYWN0Lm9yZy8yMDA0LzA3L1BvbGljeUV4ZWN1dG9yIiB4bWxuczppPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSI+CiAgICA8aGFzaHNldCB4bWxuczpkMnAxPSJodHRwOi8vc2NoZW1hcy5kYXRhY29udHJhY3Qub3JnLzIwMDQvMDcvU3lzdGVtIj4KICAgICAgPGQycDE6VHVwbGVPZnN0cmluZ3N0cmluZ3N0cmluZ3N0cmluZz4KICAgICAgICA8ZDJwMTptX0l0ZW0xPjY5ZGVjMDI0LWY2NjgtNGY2OS1hMWUwLTcwZGRiOWRkN2M0NC5SZXN1bHQ8L2QycDE6bV9JdGVtMT4KICAgICAgICA8ZDJwMTptX0l0ZW0yPk91dHB1dE9iamVjdDwvZDJwMTptX0l0ZW0yPgogICAgICAgIDxkMnAxOm1fSXRlbTMvPgogICAgICAgIDxkMnAxOm1fSXRlbTQ+UmVzdWx0czwvZDJwMTptX0l0ZW00PgogICAgICA8L2QycDE6VHVwbGVPZnN0cmluZ3N0cmluZ3N0cmluZ3N0cmluZz4KICAgIDwvaGFzaHNldD4KICA8L0xpbmtNYW5hZ2VyPgogIDxEaWFnbm9zdGljcyBPcmlnaW5hbFZlcnNpb249IjIuOTYuMC4xIi8+CiAgPEFjdGl2aXR5IHhtbG5zPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL25ldGZ4LzIwMDkveGFtbC9hY3Rpdml0aWVzIiB4bWxuczptYz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL21hcmt1cC1jb21wYXRpYmlsaXR5LzIwMDYiIHhtbG5zOm12YT0iY2xyLW5hbWVzcGFjZTpNaWNyb3NvZnQuVmlzdWFsQmFzaWMuQWN0aXZpdGllczthc3NlbWJseT1TeXN0ZW0uQWN0aXZpdGllcyIgeG1sbnM6cD0iY2xyLW5hbWVzcGFjZTpQb2xpY3lFeGVjdXRvcjthc3NlbWJseT1Qb2xpY3lFeGVjdXRpb25FbmdpbmUiIHhtbG5zOnNhZHM9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vbmV0ZngvMjAxMC94YW1sL2FjdGl2aXRpZXMvZGVidWdnZXIiIHhtbG5zOnNhcD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9uZXRmeC8yMDA5L3hhbWwvYWN0aXZpdGllcy9wcmVzZW50YXRpb24iIHhtbG5zOnNjZz0iY2xyLW5hbWVzcGFjZTpTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYzthc3NlbWJseT1tc2NvcmxpYiIgeG1sbnM6eD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93aW5meC8yMDA2L3hhbWwiIG1jOklnbm9yYWJsZT0ic2FkcyBzYXAiIHg6Q2xhc3M9IlBvbGljeSBCdWlsZGVyIj4KICAgIDx4Ok1lbWJlcnM+CiAgICAgIDx4OlByb3BlcnR5IE5hbWU9IlBvbGljeUdVSUQiIFR5cGU9IkluQXJndW1lbnQoeDpTdHJpbmcpIi8+CiAgICA8L3g6TWVtYmVycz4KICAgIDxzYXA6VmlydHVhbGl6ZWRDb250YWluZXJTZXJ2aWNlLkhpbnRTaXplPjU2MSw2ODk8L3NhcDpWaXJ0dWFsaXplZENvbnRhaW5lclNlcnZpY2UuSGludFNpemU+CiAgICA8bXZhOlZpc3VhbEJhc2ljLlNldHRpbmdzPkFzc2VtYmx5IHJlZmVyZW5jZXMgYW5kIGltcG9ydGVkIG5hbWVzcGFjZXMgc2VyaWFsaXplZCBhcyBYTUwgbmFtZXNwYWNlczwvbXZhOlZpc3VhbEJhc2ljLlNldHRpbmdzPgogICAgPHA6UG9saWN5U2VxdWVuY2UgRGlzcGxheU5hbWU9IlBvbGljeSBCdWlsZGVyIiBNaW5SZXF1aXJlZFZlcnNpb249IjIuMTcuMC4xIiBtdmE6VmlzdWFsQmFzaWMuU2V0dGluZ3M9IkFzc2VtYmx5IHJlZmVyZW5jZXMgYW5kIGltcG9ydGVkIG5hbWVzcGFjZXMgc2VyaWFsaXplZCBhcyBYTUwgbmFtZXNwYWNlcyIgc2FwOlZpcnR1YWxpemVkQ29udGFpbmVyU2VydmljZS5IaW50U2l6ZT0iNTYxLDY4OSI+CiAgICAgIDxwOlBvbGljeVNlcXVlbmNlLkFjdGl2aXRpZXM+CiAgICAgICAgPHA6RXhlY3V0ZVNRTFF1ZXJ5IEFzc2VtYmx5TmFtZT0iUG9saWN5RXhlY3V0aW9uRW5naW5lLCBWZXJzaW9uPTIuOTUuMC4yLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiIERhdGFiYXNlPSJjb25maWciIERhdGFiYXNlX0Rpc3BsYXlBcmc9ImNvbmZpZyIgRGF0YWJhc2VfSXRlbT0ie3g6TnVsbH0iIERhdGFiYXNlX0l0ZW1Qcm9wPSJ7eDpOdWxsfSIgRGlzcGxheU5hbWU9IkV4ZWN1dGUgYSBTUUwgUXVlcnkiIElzTG9jYWw9IkZhbHNlIiBJc0xvY2FsX0Rpc3BsYXlBcmc9InRydWUiIElzTG9jYWxfSXRlbT0ie3g6TnVsbH0iIElzTG9jYWxfSXRlbVByb3A9Int4Ok51bGx9IiBNaW5SZXF1aXJlZFZlcnNpb249IjIuMTcuMC4xIiBNb25pa2VyPSI2OWRlYzAyNC1mNjY4LTRmNjktYTFlMC03MGRkYjlkZDdjNDQiIE91dHB1dERlbGltaXRlcj0iQ29tbWEiIE91dHB1dERlbGltaXRlcl9EaXNwbGF5QXJnPSJDb21tYSIgT3V0cHV0RGVsaW1pdGVyX0l0ZW09Int4Ok51bGx9IiBPdXRwdXREZWxpbWl0ZXJfSXRlbVByb3A9Int4Ok51bGx9IiBQYXNzd29yZD0iW1Bhc3N3b3JkXSIgUGFzc3dvcmRfRGlzcGxheUFyZz0iSW5wdXQgUGFyYW1ldGVycy5QYXNzd29yZCIgUGFzc3dvcmRfSXRlbT0ie3g6TnVsbH0iIFBhc3N3b3JkX0l0ZW1Qcm9wPSJ7eDpOdWxsfSIgUGlwZT0ie3g6TnVsbH0iIFBpcGVfRGlzcGxheUFyZz0ie3g6TnVsbH0iIFBpcGVfSXRlbT0ie3g6TnVsbH0iIFBpcGVfSXRlbVByb3A9Int4Ok51bGx9IiBQcm90b2NvbD0iVENQIiBQcm90b2NvbF9EaXNwbGF5QXJnPSJUQ1AiIFByb3RvY29sX0l0ZW09Int4Ok51bGx9IiBQcm90b2NvbF9JdGVtUHJvcD0ie3g6TnVsbH0iIFJlc3VsdD0iW0V4ZWN1dGVTUUxRdWVyeV9SZXN1bHRdIiBSZXN1bHRTZXQ9IltFeGVjdXRlU1FMUXVlcnlfUmVzdWx0U2V0XSIgUmVzdWx0U3RyaW5nPSJbRXhlY3V0ZVNRTFF1ZXJ5X1Jlc3VsdFN0cmluZ10iIFJ1bkFzQ3VycmVudExvZ2dlZE9uVXNlcj0iRmFsc2UiIFNRTFF1ZXJ5PSJTRUxFQ1QgQ09VTlQoKikgRlJPTSBbY29uZmlnXS5bZGJvXS5bUnB0U3Vic2NyaXB0aW9uc10gV0hFUkUgW1JwdFN1YnNjcmlwdGlvbnNdLk93bmVySUQgIT0gMTsiIFNRTFF1ZXJ5RXhlY3V0aW9uVGltZW91dD0iMzAiIFNRTFF1ZXJ5RXhlY3V0aW9uVGltZW91dF9EaXNwbGF5QXJnPSIzMCIgU1FMUXVlcnlFeGVjdXRpb25UaW1lb3V0X0l0ZW09Int4Ok51bGx9IiBTUUxRdWVyeUV4ZWN1dGlvblRpbWVvdXRfSXRlbVByb3A9Int4Ok51bGx9IiBTUUxRdWVyeV9EaXNwbGF5QXJnPSJTRUxFQ1QgQ09VTlQoKikgRlJPTSBbY29uZmlnXS5bZGJvXS5bUnB0U3Vic2NyaXB0aW9uc10gV0hFUkUgW1JwdFN1YnNjcmlwdGlvbnNdLk93bmVySUQgIT0gMTsiIFNRTFF1ZXJ5X0l0ZW09Int4Ok51bGx9IiBTUUxRdWVyeV9JdGVtUHJvcD0ie3g6TnVsbH0iIFNjcmlwdEV4ZWN1dGlvbk1ldGhvZD0iRXhlY3V0ZURlYnVnIiBTZXJ2ZXI9IltTZXJ2ZXJdIiBTZXJ2ZXJfRGlzcGxheUFyZz0iSW5wdXQgUGFyYW1ldGVycy5TZXJ2ZXIgRlFETiIgU2VydmVyX0l0ZW09Int4Ok51bGx9IiBTZXJ2ZXJfSXRlbVByb3A9Int4Ok51bGx9IiBTcWxBdXRoZW50aWNhdGlvbj0iVHJ1ZSIgU3FsQXV0aGVudGljYXRpb25fRGlzcGxheUFyZz0idHJ1ZSIgU3FsQXV0aGVudGljYXRpb25fSXRlbT0ie3g6TnVsbH0iIFNxbEF1dGhlbnRpY2F0aW9uX0l0ZW1Qcm9wPSJ7eDpOdWxsfSIgVHlwZU5hbWU9IkV4ZWN1dGVTUUxRdWVyeSIgVXNlcj0iW1VzZXJuYW1lXSIgVXNlcl9EaXNwbGF5QXJnPSJJbnB1dCBQYXJhbWV0ZXJzLlVzZXJuYW1lIiBVc2VyX0l0ZW09Int4Ok51bGx9IiBVc2VyX0l0ZW1Qcm9wPSJ7eDpOdWxsfSIgbV9iVGV4dExpbmtDaGFuZ2U9IkZhbHNlIiBzYXA6VmlydHVhbGl6ZWRDb250YWluZXJTZXJ2aWNlLkhpbnRTaXplPSI1MjUsNDY2Ii8+CiAgICAgIDwvcDpQb2xpY3lTZXF1ZW5jZS5BY3Rpdml0aWVzPgogICAgICA8cDpQb2xpY3lTZXF1ZW5jZS5WYXJpYWJsZXM+CiAgICAgICAgPFZhcmlhYmxlIE5hbWU9IkV4ZWN1dGVTUUxRdWVyeV9SZXN1bHRTZXQiIHg6VHlwZUFyZ3VtZW50cz0ic2NnOklFbnVtZXJhYmxlKHg6T2JqZWN0KSIvPgogICAgICAgIDxWYXJpYWJsZSBOYW1lPSJFeGVjdXRlU1FMUXVlcnlfUmVzdWx0U3RyaW5nIiB4OlR5cGVBcmd1bWVudHM9Ing6U3RyaW5nIi8+CiAgICAgICAgPFZhcmlhYmxlIE5hbWU9IkV4ZWN1dGVTUUxRdWVyeV9SZXN1bHQiIHg6VHlwZUFyZ3VtZW50cz0ieDpEb3VibGUiLz4KICAgICAgICA8VmFyaWFibGUgTmFtZT0iVXNlcm5hbWUiIHg6VHlwZUFyZ3VtZW50cz0ieDpTdHJpbmciLz4KICAgICAgICA8VmFyaWFibGUgTmFtZT0iUGFzc3dvcmQiIHg6VHlwZUFyZ3VtZW50cz0icDpQYXNzd29yZCIvPgogICAgICAgIDxWYXJpYWJsZSBEZWZhdWx0PSImbHQ7U2VydmVyIEZRRE4mZ3Q7IiBOYW1lPSJTZXJ2ZXIiIHg6VHlwZUFyZ3VtZW50cz0ieDpTdHJpbmciLz4KICAgICAgPC9wOlBvbGljeVNlcXVlbmNlLlZhcmlhYmxlcz4KICAgIDwvcDpQb2xpY3lTZXF1ZW5jZT4KICA8L0FjdGl2aXR5Pgo8L1BvbGljeT4=</ampdata>
+	</automationmanagerpolicy>
+
+</service>
+<?N-able-SDK version=3.0?>

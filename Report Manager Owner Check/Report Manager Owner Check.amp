@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="d97591b5-cd68-411b-ac8a-92e2f1a9ce3e" Name="Report Manager Owner Check" Description="Q2hlY2sgaWYgYWxsIHJlcG9ydHMgYXJlIG93bmVkIGJ5IFJlcG9ydHMgQWRtaW4=" Version="2.17.0.1" MinRequiredVersion="2.17.0.1" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{349451db-fb27-49f6-80bd-6ae21d1cb6ef}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;Server&quot; Label=&quot;Server FQDN&quot; ParameterType=&quot;string&quot; Value=&quot;&amp;lt;Server FQDN&amp;gt;&quot; /&gt;&lt;Parameter ParameterName=&quot;Username&quot; Label=&quot;Username&quot; ParameterType=&quot;string&quot; Value=&quot;report&quot; /&gt;&lt;Parameter ParameterName=&quot;Password&quot; Label=&quot;Password&quot; ParameterType=&quot;password&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;Results&quot; Label=&quot;Results&quot; ParameterType=&quot;number&quot; Value=&quot;Execute a SQL Query.Result&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>69dec024-f668-4f69-a1e0-70ddb9dd7c44.Result</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>Results</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.96.0.1" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>561,689</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="561,689" MinRequiredVersion="2.17.0.1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:ExecuteSQLQuery Database_Item="{x:Null}" Database_ItemProp="{x:Null}" IsLocal_Item="{x:Null}" IsLocal_ItemProp="{x:Null}" OutputDelimiter_Item="{x:Null}" OutputDelimiter_ItemProp="{x:Null}" Password_Item="{x:Null}" Password_ItemProp="{x:Null}" Pipe="{x:Null}" Pipe_DisplayArg="{x:Null}" Pipe_Item="{x:Null}" Pipe_ItemProp="{x:Null}" Protocol_Item="{x:Null}" Protocol_ItemProp="{x:Null}" SQLQueryExecutionTimeout_Item="{x:Null}" SQLQueryExecutionTimeout_ItemProp="{x:Null}" SQLQuery_Item="{x:Null}" SQLQuery_ItemProp="{x:Null}" Server_Item="{x:Null}" Server_ItemProp="{x:Null}" SqlAuthentication_Item="{x:Null}" SqlAuthentication_ItemProp="{x:Null}" User_Item="{x:Null}" User_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.95.0.2, Culture=neutral, PublicKeyToken=null" Database="config" Database_DisplayArg="config" DisplayName="Execute a SQL Query" sap:VirtualizedContainerService.HintSize="525,466" IsLocal="False" IsLocal_DisplayArg="true" MinRequiredVersion="2.17.0.1" Moniker="69dec024-f668-4f69-a1e0-70ddb9dd7c44" OutputDelimiter="Comma" OutputDelimiter_DisplayArg="Comma" Password="[Password]" Password_DisplayArg="Input Parameters.Password" Protocol="TCP" Protocol_DisplayArg="TCP" Result="[ExecuteSQLQuery_Result]" ResultSet="[ExecuteSQLQuery_ResultSet]" ResultString="[ExecuteSQLQuery_ResultString]" RunAsCurrentLoggedOnUser="False" SQLQuery="SELECT COUNT(*) FROM [config].[dbo].[RptSubscriptions] WHERE [RptSubscriptions].OwnerID != 1;" SQLQueryExecutionTimeout="30" SQLQueryExecutionTimeout_DisplayArg="30" SQLQuery_DisplayArg="SELECT COUNT(*) FROM [config].[dbo].[RptSubscriptions] WHERE [RptSubscriptions].OwnerID != 1;" ScriptExecutionMethod="ExecuteDebug" Server="[Server]" Server_DisplayArg="Input Parameters.Server FQDN" SqlAuthentication="True" SqlAuthentication_DisplayArg="true" TypeName="ExecuteSQLQuery" User="[Username]" User_DisplayArg="Input Parameters.Username" m_bTextLinkChange="False" />
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="ExecuteSQLQuery_ResultSet" />
+        <Variable x:TypeArguments="x:String" Name="ExecuteSQLQuery_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="ExecuteSQLQuery_Result" />
+        <Variable x:TypeArguments="x:String" Name="Username" />
+        <Variable x:TypeArguments="p:Password" Name="Password" />
+        <Variable x:TypeArguments="x:String" Default="&lt;Server FQDN&gt;" Name="Server" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>
