@@ -48,8 +48,7 @@ if ($Debug)
 
 $Connected = $False
 $USBs = Get-WmiObject Win32_USBControllerDevice | Foreach-Object { [Wmi]$_.Dependent }
-foreach ($USB in $USBs)
-{
+foreach ($USB in $USBs) {
     $HWID = $USB.HardwareID
     if ($HWID -like $Hardware_ID)
     {
