@@ -36,6 +36,4 @@ To monitor the Azure Automation Job, you need the the following items:
 - Automation Account Name. This is the name of the Automation Account, your automation is part of.
 - Runbook Name. What is the exact name of the runbook in your job you want to monitor.
 
-To get the Object ID, go to [Azure](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) and click on the app with a Certificate or Secret, then click the copy button next to the Object ID and paste this in the Object ID field of this service.
-
 For the other fields you need to fill out, you need [this app](https://github.com/eagle00789/N-Central/blob/master/Azure%20Monitoring/README.md) setup in Azure for the customer
